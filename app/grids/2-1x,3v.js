@@ -12,7 +12,7 @@ function addViews(win, views) {
 function createView(win, x, y, url) {
   let view = new BrowserView({ 
     webPreferences: { 
-      nodeIntegration: true 
+      nodeIntegration: false 
     }
   })
   win.addBrowserView(view)

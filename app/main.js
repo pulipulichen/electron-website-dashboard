@@ -31,10 +31,10 @@ if (process.env["GRID_SETTINGS"]) {
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS']=true
 
 // https://github.com/electron/electron/issues/28865#issuecomment-876503547
-app.commandLine.appendSwitch('disable-features', 'CrossOriginOpenerPolicy')
+//app.commandLine.appendSwitch('disable-features', 'CrossOriginOpenerPolicy')
 
 const createWindow = async () => {
-  
+  /*
   session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
     callback({
       responseHeaders: {
@@ -43,7 +43,7 @@ const createWindow = async () => {
       }
     })
   })
-  
+  */
 
   const win = new BrowserWindow({
     width: 800, 
@@ -57,6 +57,7 @@ const createWindow = async () => {
 //      sandbox: false,
 //      nodeIntegrationInWorker: true // <-- this causes the DevTools to crash
 //    },
+    /*
     webPreferences:{ 
       webviewTag: true ,
       contextIsolation: false,
@@ -65,7 +66,7 @@ const createWindow = async () => {
       allowRunningInsecureContent: true,
       webSecurity: true
     }
-    
+    */
   })
   
   if (setting.title) {
@@ -82,7 +83,7 @@ const createWindow = async () => {
   
   //win.setIcon ("icon.png")
   //win.loadURL(`file://${__dirname}/index.html`)
-  win.loadURL('https://www.facebook.com/pulipuli.blogspot/publishing_tools/?section=SCHEDULED_POSTS')
+  //win.loadURL('https://www.facebook.com/pulipuli.blogspot/publishing_tools/?section=SCHEDULED_POSTS')
   
   win.webContents.openDevTools()
   //win.setIcon("https://blogger.googleusercontent.com/img/a/AVvXsEhQik33S9G2GldjEJgj6NBAC0XmTubFOhvK2w9VoaeRiqmxwSSglRmUb2ifrqq6w18wNnaZE9cib4_OJT4xeFMZLJRYm2-YJoOyHXwowqR8hKSpWnKjESzSaJOiKr4R_ZQsAFDvKygLpNg0dmWF93Il-p6AJg9fNfzU79IDxgvU4ssvBWTIKvk")
@@ -101,7 +102,7 @@ const createWindow = async () => {
 //  view.setBounds({ x: 0, y: 0, width: 600, height: 300 })
 //  //view.webContents.loadURL('http://info.cern.ch/index.html')
 //  view.webContents.loadURL('https://electronjs.org')
-    //gridSetting.addViews(win, setting.views)
+    gridSetting.addViews(win, setting.views)
    
     win.maximize()
 //  let view1 = new BrowserView({ webPreferences: { nodeIntegration: false }})
@@ -120,7 +121,7 @@ const createWindow = async () => {
   win.on('resize', () => {
     clearTimeout(resizeTimer)
     resizeTimer = setTimeout(() => {
-      //gridSetting.onResize(win)
+      gridSetting.onResize(win)
     }, 100)
   })
 }
