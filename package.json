@@ -6,6 +6,7 @@
   "scripts": {
     "build": "./docker-compose-scripts/docker-compose-build.sh",
     "start": "./docker-compose-scripts/docker-compose-up.sh",
+    "start-fb": "./settings/pulipuli-blog-fanpage.sh",
     "@d.start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

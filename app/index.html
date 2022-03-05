@@ -4,7 +4,6 @@
       <meta charset = "UTF-8">
       <title>Menus</title>
       
-      <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
    </head>
    
    <body>
@@ -14,10 +13,23 @@
          </div>
       </div>
       
+      <!-- Webview -->
+      <webview
+        id="webview"
+        disablewebsecurity
+        src="https://www.facebook.com/pulipuli.blogspot/publishing_tools/?section=SCHEDULED_POSTS"
+        data-home="https://www.facebook.com/"
+        style="height: 50vh"></webview>
+     
       <script type = "text/javascript">
+        var webview = document.getElementById("webview");
+           webview.addEventListener("dom-ready", function(){ webview.openDevTools(); });
+        
          // Event handlers for loading events.
          // Use these to handle loading screens, transitions, etc
          onload = () => {
+           
+            return false
             const webview = document.getElementById('foo')
             const indicator = document.querySelector('.indicator')
 
