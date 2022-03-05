@@ -85,7 +85,7 @@ const createWindow = async () => {
   //win.loadURL(`file://${__dirname}/index.html`)
   //win.loadURL('https://www.facebook.com/pulipuli.blogspot/publishing_tools/?section=SCHEDULED_POSTS')
   
-  win.webContents.openDevTools()
+  //win.webContents.openDevTools()
   //win.setIcon("https://blogger.googleusercontent.com/img/a/AVvXsEhQik33S9G2GldjEJgj6NBAC0XmTubFOhvK2w9VoaeRiqmxwSSglRmUb2ifrqq6w18wNnaZE9cib4_OJT4xeFMZLJRYm2-YJoOyHXwowqR8hKSpWnKjESzSaJOiKr4R_ZQsAFDvKygLpNg0dmWF93Il-p6AJg9fNfzU79IDxgvU4ssvBWTIKvk")
   
 //  win.loadURL(url.format ({
