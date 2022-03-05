@@ -1,0 +1,25 @@
+{
+  "name": "electron-website-dashboard",
+  "version": "1.0.0",
+  "description": "Display multiple websites in an application.",
+  "main": "index.js",
+  "scripts": {
+    "build": "./docker-compose-scripts/docker-compose-build.sh",
+    "start": "./docker-compose-scripts/docker-compose-up.sh",
+    "@d.start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://pulipuli.chen%40gmail.com@github.com/pulipulichen/electron-website-dashboard.git"
+  },
+  "keywords": [
+    "electron"
+  ],
+  "author": "Pulipuli Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pulipulichen/electron-website-dashboard/issues"
+  },
+  "homepage": "https://github.com/pulipulichen/electron-website-dashboard#readme"
+}

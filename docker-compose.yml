@@ -1,0 +1,27 @@
+# docker-Specify the compose version
+version: "3"
+
+services:
+  app:
+    #Build a Dockerfile in the same directory
+    build: .
+    # https://stackoverflow.com/a/71027261
+    user: ${MY_UID}:${MY_GID}
+    #You can keep the container running.
+    tty: true
+    #Mount the files in the directory to the app directory in the container
+    volumes:
+        - /tmp/.X11-unix:/tmp/.X11-unix
+        - /etc/localtime:/etc/localtime:ro
+        - ~/:/home/user
+        - ./app:/app
+    environment:
+      - DISPLAY=${DISPLAY}
+      - TZ=${TZ}
+      - LANG=${LANG}
+      #- LC_ALL=${LC_ALL} # 設了會妨礙輸入法
+      - XMODIFIERS=${XMODIFIERS}
+      - QT_IM_MODULE=${QT_IM_MODULE}
+      - GTK_IM_MODULE=${GTK_IM_MODULE}
+    # https://docs.docker.com/compose/compose-file/compose-file-v3/
+    privileged: true
