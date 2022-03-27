@@ -18,6 +18,7 @@ services:
         - ./app:/app
         - ./settings:/settings
         - /dev/snd:/dev/snd
+        - ./cache:/home/user/.config/Electron Dashboard/Local Storage/leveldb
     environment:
       - DISPLAY=${DISPLAY}
       - TZ=${TZ}
