@@ -16,6 +16,7 @@ services:
         - ~/:/home/user
         - ./app:/app
         - ./settings:/settings
+        - /dev/snd:/dev/snd
     environment:
       - DISPLAY=${DISPLAY}
       - TZ=${TZ}
