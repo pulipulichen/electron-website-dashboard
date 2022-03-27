@@ -12,6 +12,7 @@ services:
     #Mount the files in the directory to the app directory in the container
     volumes:
         - /tmp/.X11-unix:/tmp/.X11-unix
+        - /tmp/tmp.today:/tmp/tmp.today
         - /etc/localtime:/etc/localtime:ro
         - ~/:/home/user
         - ./app:/app
@@ -28,3 +29,4 @@ services:
       - GRID_SETTINGS=${GRID_SETTINGS}
     # https://docs.docker.com/compose/compose-file/compose-file-v3/
     privileged: true
+    shm_size: '2gb'
