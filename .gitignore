@@ -1,5 +1,8 @@
 /nbproject/private/
 /settings/*
+/app/node_modules
+/app/package.json
+/app/package-lock.json
 !/settings/.gitignore
 !/settings/2-1x,3v.demo.js
 !/settings/3-1w,3r,av.demo.js
