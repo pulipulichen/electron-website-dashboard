@@ -17,6 +17,5 @@ export LANG=$LANG
 
 #export GRID_SETTINGS=/settings/2-1x,3v.demo.js
 export GRID_SETTINGS=/settings/3-1w,3r,av.demo.js
-docker-compose run app electron main.js
-
+docker-compose run app electron main.js --no-sandbox
 

@@ -6,6 +6,7 @@
   "scripts": {
     "build": "./docker-compose-scripts/docker-compose-build.sh",
     "up": "./docker-compose-scripts/docker-compose-up.sh",
+    "bash": "./docker-compose-scripts/docker-compose-bash.sh",
     "@d.start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
